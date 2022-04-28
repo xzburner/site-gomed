@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container">
+  <div class="title">
+    <b>Especialidades que você encontrar aqui</b>
+  </div>
+  <div class="text">
+    <p>
+      Nosso corpo é um sistema complexo e merece atenção em cada detalhe. Na GoMed você encontra dezenas de
+      especialidades médicas para cuidar da saúde com excelência.
+    </p>
+  </div>
+  <mdb-carousel [controls]="true" [indicators]="true">
+    <mdb-carousel-item [interval]="10000" *ngFor="let items of listCards">
+      <div fxLayout="row" class="mat-box">
+        <mat-card *ngFor="let card of items">
+          <img mat-card-image src="{{card.urlIcone}}">
+          <mat-card-content>
+            <p class="card-title">{{card.titulo}}</p>
+            <p class="card-info">{{card.subTitulo}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="card-btn">
+              <button mat-button (click)="redirect()">
+                Agendar
+              </button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+</div>
+<div class="contador">
+  <div class="container">
+    <div class="itens">
+      <div>
+        <h1 class="number">+
+          <span>
+            1,566
+          </span>
+        </h1>
+        <h2 class="legenda">médicos</h2>
+      </div>
+      <div>
+        <h1 class="number">+
+          <span>
+            1,566
+          </span>
+        </h1>
+        <h2 class="legenda">clínicas</h2>
+      </div>
+      <div>
+        <h1 class="number">+
+          <span>
+            1,566
+          </span>
+        </h1>
+        <h2 class="legenda">exames</h2>
+      </div>
+      <div>
+        <h1 class="number">+
+          <span>
+            1,566
+          </span>
+        </h1>
+        <h2 class="legenda">médicamentos</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="title">
+    <b>Tudo que você procura</b>
+  </div>
+  <div class="text">
+    <p>
+      Conectamos você a especialistas, laboratórios e farmácias com nossas soluções integradas de medicina.
+      Cadastre-se e cuide da sua saúde e do seu bem-estar de forma fácil, rápida e segura.
+    </p>
+  </div>
+  <div clas="row text-center">
+    <button class="botao  btn btn-padrao-outline btn-secondary btn-lg rounded-pill">
+      Fazer meu cadastro e começar a usar
+    </button>
+
+  </div>
+</div>

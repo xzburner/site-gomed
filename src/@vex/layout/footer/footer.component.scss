@@ -1,0 +1,60 @@
+:host {
+  bottom: 0;
+  display: block;
+  width: 100%;
+  z-index: var(--footer-z-index);
+}
+
+.footer {
+  background: var(--footer-background);
+  color: var(--footer-color);
+  height: var(--footer-height);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  position: relative;
+  z-index: var(--footer-z-index);
+  height: 130px;
+}
+
+.info h2 {
+  font-weight: bolder;
+
+}
+
+.info {
+  padding-left: 140px;
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+  .info {
+    padding-left: 10px;
+  }
+
+}
+
+.sub {
+  color: #447095;
+  margin-top: 10%;
+  font-size: 17px;
+
+}
+
+.sub:hover {
+  text-decoration: underline;
+  color: #447095;
+}
+
+.alterar-icone{
+  margin-left: 8%;
+  width: 50px;
+  transition: .0s ease-in-out .0s;
+  filter: grayscale(0%);
+}
+.alterar-icone:hover{
+  margin-left: 8%;
+  width: 50px;
+  transition: .0s ease-in-out .0s;
+  filter: grayscale(100%);
+}

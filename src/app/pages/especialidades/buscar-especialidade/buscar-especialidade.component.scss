@@ -1,0 +1,126 @@
+.mat-card-content {
+  display: flex;
+  flex-flow: row;
+}
+
+.d-left {
+  display: flex;
+  flex-flow: row;
+  width: 50%;
+}
+
+.d-right {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+}
+
+.icon {
+  margin-right: 30px;
+}
+
+.icon i {
+  color: #457196;
+  font-size: 54px;
+}
+
+.mat-card {
+  margin-bottom: 20px !important;
+}
+
+.medical {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.medical .name {
+  padding-bottom: 30px;
+}
+
+.medical .name strong {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  display: block;
+  color: #069abb;
+}
+
+.medical .name span {
+  font-weight: 400;
+  display: block;
+  color: #515151;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.medical .endereco {
+  text-align: left !important;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 30px;
+}
+
+.medical .endereco span {
+  color: #515151;
+}
+
+.horario-title strong {
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #069abb;
+}
+
+.agenda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+.agenda .date {
+  width: 170px;
+  text-align: left;
+}
+
+.agenda .date .day {
+  font-weight: 400;
+  color: #515151;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.agenda .date .week-day {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #515151;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.agenda .pills {
+  width: calc(100% - 200px);
+}
+
+.agenda .pills .item {
+  user-select: none;
+  padding: 2px 18px;
+  background: #447095;
+  color: #FFFFFF;
+  border-radius: 60px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+::ng-deep .slick-prev:before,
+::ng-deep .slick-next:before {
+  color: #447095 !important;
+}
+
+.slick-slide {
+  padding: 0 2px;
+}

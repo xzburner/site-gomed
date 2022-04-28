@@ -1,0 +1,99 @@
+.fundo {
+  background: url('/assets/img/fundos/foto-seguranca.png');
+  background-size: 100% 100%;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-size: 28px;
+  line-height: 47px;
+  color: #069abb;
+  margin-top: 60px;
+  font-weight: bold
+
+}
+
+.sub-title {
+  font-size: 28px;
+  line-height: 33px;
+  color: #447095;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  padding: 20px;
+  color: #447095;
+  background: #447095;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 1px solid;
+}
+
+.title-card {
+  padding-bottom: 32px;
+  margin-right: 95px;
+  margin-left: 26px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  text-align: initial;
+  align-items: center;
+  font-family: 'Rubik';
+
+}
+
+.text-card {
+  font-family: ' Passion One', arial;
+  margin-left: 26px;
+  text-align: initial;
+  padding-bottom: 38px;
+  margin-right: 56px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.cadastrar {
+  cursor: pointer;
+  margin-left: auto;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 37px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 17px 20px;
+  background: #447095;
+}
+
+.col-cadastrar {
+  display: flex;
+  align-items: flex-end;
+}
+
+.text p {
+  text-align: justify;
+  font-size: 18px;
+  align-items: center;
+  color: #515151;
+  line-height: 21px;
+  font-family: ' Passion One', arial;
+  margin-top: 23px;
+}

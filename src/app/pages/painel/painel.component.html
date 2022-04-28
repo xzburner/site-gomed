@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div style="margin-top: 4%;">
+  <vex-load *ngIf="load"></vex-load>
+  <div style="margin-left: 10%; margin-right: 10%;">
+    <div class="row">
+      <div class="col">
+        <h1 class="azul" style=" font-size: xx-large;"><b>Olá, {{this.user.paciente.nome}}</b></h1>
+      </div>
+      <div class="col text-right">
+        <div>
+          <button style="border-radius: 30px;" mat-raised-button type="submit">Calendário</button>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 4%;">
+      <div class="col">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <h1><b>Próximo compromisso</b></h1>
+          </div>
+          <div class="col-md-4 text-right">
+            <h2><a href="#">Ver todos</a></h2>
+          </div>
+        </div>
+        <div *ngIf="!haveAgendamento" class="row">
+          <mat-card class="example-card none text-center" style="margin: auto;">
+            <div style="padding: 20px; margin: auto;">
+              <i class="fas fa-calendar-day"
+                style="font-size: 50px; padding-bottom: 18px; text-align: center; display: block;color:rgb(216 216 216 / 84%);"></i>
+              <h1 class="card-title" style="color:rgb(216 216 216 / 84%);">Você ainda não tem agendamentos futuros</h1>
+            </div>
+          </mat-card>
+        </div>
+        <div *ngIf="haveAgendamento" class="row">
+          <div *ngFor="let agendamentosFuturo of agendamentosFuturos">
+            <mat-card class="example-card text-center" [ngClass]="{'red': agendamentosFuturo.flgStatus === 'C' }"
+              style="margin: auto;">
+              <mat-card-header>
+                <span class="title"
+                  [ngClass]="{'red': agendamentosFuturo.flgStatus === 'C' }">{{getTipoAtendimentoStatus(agendamentosFuturo.flgStatus,
+                  agendamentosFuturo.flgTipoAtendimento)}}</span>
+                <span class="date">
+                  <span>{{dp.transform(agendamentosFuturo.dataHoraAgendamento, 'dd-MM-yyyy')}}</span>
+                  <span class="day">{{dp.transform(agendamentosFuturo.dataHoraAgendamento, 'EEEE')}}</span>
+                </span>
+              </mat-card-header>
+              <mat-card-content style="margin-top: 5%;">
+                <div class="l-left">
+                  <div *ngIf="agendamentosFuturo.flgTipoAtendimento === 'C'" class="professional">
+                    <b>{{agendamentosFuturo.medico.nome}}</b>
+                    &bull;
+                    <span>{{agendamentosFuturo.especialidade.nome}}</span>
+                  </div>
+                  <div *ngIf="agendamentosFuturo.flgTipoAtendimento === 'E'" class="professional">
+                    <b>{{agendamentosFuturo.clinica.nome}}</b>
+                    &bull;
+                    <span>{{agendamentosFuturo.exameGrupo.nome}}</span>
+                  </div>
+                  <div class="timer">
+                    <i class="fa-solid fa-clock"></i>
+                    <b>{{dp.transform(agendamentosFuturo.dataHoraAgendamento, 'HH:mm')}}<span>&nbsp; 15 minutos de
+                        antecedência</span></b>
+                  </div>
+                  <div *ngIf="validaOperadoraSaude(agendamentosFuturo.operadoraSaude.nome)" class="values">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <span>{{agendamentosFuturo.valorConsulta}}</span>
+                  </div>
+                  <div *ngIf="!validaOperadoraSaude(agendamentosFuturo.operadoraSaude.nome)" class="values">
+                    <i class="fa-solid fa-building"></i>
+                    <span>{{agendamentosFuturo.operadoraSaude.nome}}</span>
+                  </div>
+                  <div class="endereco">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>{{agendamentosFuturo.endereco.logradouro}},
+                      {{agendamentosFuturo.endereco.numero}} /
+                      {{agendamentosFuturo.endereco.complemento}} - {{agendamentosFuturo.endereco.bairro}}
+                      -
+                      {{agendamentosFuturo.endereco.cidade}}</span>
+                  </div>
+                </div>
+                <div class="l-right">
+                  <button
+                    *ngIf="(agendamentosFuturo.flgStatus === 'A' && agendamentosFuturo.flgTipoAtendimento === 'C')"
+                    class="btn-cancel">Cancelar Consulta</button>
+                  <button
+                    *ngIf="(agendamentosFuturo.flgStatus === 'A' && agendamentosFuturo.flgTipoAtendimento === 'E')"
+                    class="btn-cancel">Cancelar Exame</button>
+                  <a class="link-local"><i class="fa-solid fa-location-dot"></i> ver localização</a>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h1><b>Histórico de consultas e exames</b></h1>
+        <div *ngIf="!haveHistorico" class="row">
+          <mat-card class="example-card none text-center" style="margin: auto;">
+            <div style="padding: 20px; margin: auto;">
+              <i class="fas fa-calendar-day"
+                style="font-size: 50px; padding-bottom: 18px; text-align: center; display: block;color:rgb(216 216 216 / 84%);"></i>
+              <h1 class="card-title" style="color:rgb(216 216 216 / 84%);">Você não tem histórico de agendamentos</h1>
+            </div>
+          </mat-card>
+        </div>
+        <div *ngIf="haveHistorico" class="row">
+          <mat-card class="example-card none text-center" style="margin: auto;">
+            <div *ngFor="let historico of historicoAgendamentos">
+              <div class="div-historico" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px"
+                fxLayoutGap.lt-sm="0">
+                <strong class="cancelado" *ngIf="historico.flgStatus == 'C'"><i
+                    class="fa-solid fa-circle-exclamation"></i> Cancelado
+                </strong>
+                <strong class="retorno" *ngIf="historico.flgStatus == 'R'"><i
+                    class="fa-solid fa-circle-exclamation"></i> Retorno
+                </strong>
+                <strong class="agendado" *ngIf="historico.flgStatus == 'A'"><i
+                    class="fa-solid fa-circle-exclamation"></i>
+                  Agendado
+                </strong>
+                <span *ngIf="historico.flgTipoAtendimento == 'E'"> Exame - {{historico.exameGrupo.nome}} </span>
+                <span *ngIf="historico.flgTipoAtendimento == 'C'"> Consulta - {{historico.especialidade.nome}} </span>
+                <span>{{dp.transform(historico.dataHoraAgendamento, 'dd-MM-yyyy')}} </span>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

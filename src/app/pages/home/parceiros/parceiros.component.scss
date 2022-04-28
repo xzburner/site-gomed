@@ -1,0 +1,21 @@
+.pg-image {
+    background-image: url('../../../../assets/img/parceiros/1.png');
+    background-size: cover;
+    // width: 150px;
+    // height: 150px;
+}
+.alinhar-imagem{
+    margin: auto;
+    transition: .30s ease-in-out .30s; 
+    filter: grayscale(100%);
+}
+.alinhar-imagem:hover{
+    margin: auto;
+    transition: .30s ease-in-out .30s; 
+    filter: grayscale(0%);
+}
+
+.mat-raised-button {
+    width: 30% !important;
+    margin: auto;
+}

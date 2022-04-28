@@ -1,0 +1,18 @@
+export enum MessagesSnackBar {
+  LOGIN = 'Login efetuado com sucesso!',
+  LOGIN_ERRO = 'Erro ao fazer login. Erro: ',
+  CADASTRO = 'Cadastro realizado com sucesso!',
+  CADASTRO_ERRO = 'Erro no cadastro. Erro: ',
+  ITEM_REMOVIDO = 'Item removido com sucesso!',
+  ITEM_REMOVIDO_ERRO = 'Erro ao remover item. Erro: ',
+  ITEM_REMOVIDO_FALHA = 'Erro ao remover item.',
+  ITEM_DESABILITADO = 'Item desativado com sucesso!',
+  ITEM_DESABILITADO_ERRO = 'Erro ao desativar o item. Erro: ',
+  ITEM_HABILITADO = 'Item ativado com sucesso!',
+  ITEM_HABILITADO_ERRO = 'Erro ao ativar o item. Erro: ',
+  EDITADO = 'Campos editados com sucesso!',
+  EDITADO_ERRO = 'Erro ao editar campos. Erro: ',
+  BUSCA = 'Busca realizada com sucesso!',
+  BUSCA_ERRO = 'Erro ao realizar a Busca Erro: ',
+  BUSCA_FALHA = 'Erro ao realizar a Busca.',
+}

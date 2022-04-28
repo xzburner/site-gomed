@@ -1,0 +1,66 @@
+
+@import "../../../@vex/styles/partials/plugins/angular-calendar";
+@import "../../../../node_modules/angular-calendar/css/angular-calendar.css";
+
+
+div .header{
+  display: flex;
+}
+
+.header .legenda{
+  color:#069abb;
+  font-family: 'Rubik', sans-serif;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 40px;
+  display: flex;
+}
+
+.buttonAgenda{
+  font-family: 'Rubik';
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  padding: 17px 88px 17px 89px;
+  border-radius: 6em;
+  line-height: 21px;
+  min-width: 6em;
+  color: #fff;
+  background-color: #447095;
+  align-items: center;
+  text-align: center;
+}
+
+vex-calendar {
+  .headline {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: capitalize;
+    color: #333;
+  }
+  
+  div .startDate{
+    background-color: #2c3e50;  
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    min-width: 6em;
+  }
+
+  div.hoje{
+    padding-right: 4px;
+  }
+
+  div .chevrons{
+    background-color: #2c3e50;
+    border-radius: 0.25em;
+    min-width: 7em;
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+

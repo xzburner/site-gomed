@@ -1,0 +1,45 @@
+.fundo{
+    background: url('/assets/img/fundos/foto-home.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+::ng-deep .mat-form-field-outline-start {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+} 
+
+::ng-deep .mat-form-field-outline-end {
+border-radius: 0 28px 28px 0 !important;
+}
+
+::ng-deep .mat-form-field {
+    width: 100%;
+} 
+
+.mat-button-toggle {
+    color: #447095;
+    font-weight: bolder;
+}
+
+.mat-button-toggle-checked {
+    background-color: #447095;
+    color: white;
+    font-weight: bolder;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #447095;
+}
+
+::ng-deep .mat-raised-button {
+    width: 100%;
+    background-color: #447095;
+    color: white;
+    font-weight: bolder;
+}
+
+.option1{
+    background:  var(--background)  center / contain no-repeat;
+    white-space: nowrap
+  
+  }

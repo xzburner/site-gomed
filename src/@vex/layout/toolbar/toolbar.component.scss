@@ -1,0 +1,48 @@
+:host {
+  background: var(--toolbar-background);
+  box-sizing: border-box;
+  color: var(--toolbar-color);
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  z-index: var(--toolbar-z-index);
+}
+
+.toolbar {
+  height: var(--toolbar-height);
+}
+
+.mat-icon {
+  color: var(--toolbar-icon-color);
+}
+
+a {
+  color: var(--toolbar-color);
+  text-decoration: none;
+}
+
+.btn-menu.profissional {
+  color: #447095;
+  background: #fff;
+  box-shadow: 0 5px 30px rgb(0 0 0 / 10%);
+  padding: 17px 24px 17px 25px;
+  margin-right: 30px;
+  border-radius: 60px;
+}
+
+.btn-menu.acessar,
+.btn-menu.profissional {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-menu.acessar {
+  color: #fff;
+  background: #447095;
+  border-radius: 60px;
+  padding: 17px 88px 17px 89px;
+}

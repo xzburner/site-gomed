@@ -1,0 +1,22 @@
+<div class="toolbar w-full px-gutter" fxLayout="row" fxLayoutAlign="start center" vexContainer>
+  <a *ngIf="isVerticalLayout$ | async" [routerLink]="['/home']" class="ltr:mr-4 rtl:ml-4 block" fxLayout="row"
+    fxLayoutAlign="start center">
+    <img class="select-none" src="assets/img/logos/logo.png">
+  </a>
+  <span fxFlex></span>
+  <div class="-mx-1 flex items-center">
+    <div *ngIf="hasLogin" class="px-1">
+      <vex-toolbar-user></vex-toolbar-user>
+    </div>
+    <div *ngIf="!hasLogin" fxFlex="auto" fxLayout="row">
+      <a href="/buscar-especialidade" style="margin:auto">
+        <button size="lg" class="btn-menu profissional">Profissionais de saúde</button>
+      </a>
+      <a href="/login" style="margin:auto">
+        <button size="lg" class="btn-menu acessar">Acessar</button>
+      </a>
+    </div>
+  </div>
+</div>
+<vex-navigation *ngIf="(isVerticalLayout$ | async) && isNavbarBelowToolbar$ | async" [fxHide]="mobileQuery">
+</vex-navigation>

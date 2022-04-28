@@ -1,0 +1,77 @@
+@import "~simplebar/dist/simplebar.css";
+@import "~highlight.js/styles/androidstudio.css";
+
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+// MDB SCSS
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+
+// Vex Core
+@import "./@vex/styles/core";
+
+/*
+  You can override any CSS Variable or style here
+  Example:
+
+  :root {
+   --sidenav-background: #333333;
+  }
+
+  All possible variables can be found in @vex/styles/core or by simply inspecting the element you want to change
+  in Chrome/Firefox DevTools
+*/
+
+/**
+  Uncomment the below code and adjust the values to fit your colors, the application will automatically adjust
+ */
+:root {
+  // --color-primary: blue;
+  // --color-primary-contrast: white;
+
+  // --color-accent: yellow;
+  // --color-accent-contrast: black;
+
+  // --color-warn: yellow;
+  // --color-warn-contrast: black;
+}
+
+.swal2-title {
+  font-size: 1rem !important;
+}
+
+.swal2-styled.swal2-confirm,
+.swal2-styled.swal2-cancel {
+  font-size: 0.7rem !important;
+}
+
+.swal2-popup {
+  width: auto !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.azul{
+  color: #069abb;
+}
+
+.btn-padrao {
+  margin: 20px auto;
+  display: block;
+  border-radius: 60px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: #447095;
+  padding: 17px 20px 17px 20px;
+
+}

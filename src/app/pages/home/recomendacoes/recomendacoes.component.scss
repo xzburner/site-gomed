@@ -1,0 +1,82 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  // background-image: url('../../../../assets/img/illustrations/image.jpg');
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.mat-box {
+  padding-bottom: 60px;
+}
+
+.mat-comment {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3);
+  margin-right: 20px;
+}
+
+.mat-comment img {
+  display: flex;
+  border-radius: 50%;
+  width: 115.87px;
+  height: 106.26px;
+  margin-top: 20px;
+}
+
+.mat-comment strong {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #069abb;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mat-comment span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #515151;
+  text-align: center;
+  margin-top: 20px;
+}
+
+::ng-deep .carousel-indicators button {
+  background: #cccccc !important;
+  border-radius: 100%;
+  width: 20px;
+  height: 0px;
+}
+
+::ng-deep .carousel-indicators .active {
+  background: #069abb !important;
+}
+
+::ng-deep .carousel-control-prev {
+  width: 0 !important;
+  left: -14px !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .carousel-control-prev-icon {
+  background-image: none !important;
+  color: #069abb !important;
+}
+
+::ng-deep .carousel-control-next-icon {
+  background-image: none !important;
+  color: #069abb !important;
+}
+
+::ng-deep .carousel-control-next {
+  width: 0 !important;
+  right: -14px !important;
+  opacity: 1 !important;
+}

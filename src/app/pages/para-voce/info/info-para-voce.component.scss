@@ -1,0 +1,178 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #069abb;
+  text-align: center;
+  font-family: 'Rubik';
+  font-size: 28px;
+  line-height: 33px;
+  margin-top: 90px;
+}
+
+.text p {
+  text-align: justify;
+  font-size: 18px;
+  align-items: center;
+  color: #515151;
+  line-height: 21px;
+  font-family: ' Passion One', arial;
+  margin-top: 23px;
+}
+
+.botao {
+  margin: 49px auto auto;
+  font-family: Rubik;
+  font-size: 18px;
+  color: #447095;
+  background: #fff;
+  box-shadow: 0 7px 30px rgb(0 0 0 / 15%);
+  display: block;
+  padding: 17px 45.25px 17px 45.75px;
+}
+
+.contador {
+  background: linear-gradient(91.2deg, #069abb 50.62%, rgba(218, 232, 248, 0) 162.59%);
+  margin-top: 54px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.number {
+  color: #fff;
+  font-family: 'Rubik';
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  font-size: 35px;
+  flex-wrap: wrap;
+}
+
+.legenda {
+  font-size: 28px;
+  line-height: 33px;
+  color: #447095;
+  font-family: 'Rubik';
+  font-weight: 700;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.botao {
+  margin: 49px auto auto;
+  font-family: Rubik;
+  font-size: 18px;
+  color: #447095;
+  background: #fff;
+  box-shadow: 0 7px 30px rgb(0 0 0 / 15%);
+  display: block;
+  padding: 17px 45.25px 17px 45.75px;
+}
+
+.mat-box {
+  padding-bottom: 60px;
+}
+
+.mat-card {
+  width: calc(100% / 3);
+  margin-right: 20px;
+}
+
+.mat-card:last-child {
+  margin-right: 0;
+}
+
+.mat-card-actions {
+  padding: 20px 0 20px 0 !important;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #069abb;
+  text-align: center;
+}
+
+.card-info {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #515151;
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.card-btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-btn button {
+  margin: 20px 55px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: #447095;
+  background: #fff;
+  box-shadow: 0 5px 30px rgb(0 0 0 / 10%);
+  border-radius: 60px;
+  padding: 17px 45.25px 17px 45.75px;
+  width: 80%;
+  border: 1px solid #6c757d;
+}
+
+::ng-deep .carousel-indicators button {
+  background: #cccccc !important;
+  border-radius: 100%;
+  width: 20px;
+  height: 0px;
+}
+
+::ng-deep .carousel-indicators .active {
+  background: #069abb !important;
+}
+
+::ng-deep .carousel-control-prev {
+  width: 0 !important;
+  left: -14px !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .carousel-control-prev-icon {
+  background-image: none !important;
+  color: #069abb !important;
+}
+
+::ng-deep .carousel-control-next-icon {
+  background-image: none !important;
+  color: #069abb !important;
+}
+
+::ng-deep .carousel-control-next {
+  width: 0 !important;
+  right: -14px !important;
+  opacity: 1 !important;
+}

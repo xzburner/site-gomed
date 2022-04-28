@@ -1,0 +1,23 @@
+<div style="margin-left: 10%; margin-right: 10%;">
+  <div class="text-center">
+    <h2 style="color: #069abb; font-size: x-large; padding-top: 4%;"><b>Recomendações</b> </h2>
+  </div>
+
+  <mdb-carousel [controls]="true" [indicators]="true">
+    <mdb-carousel-item [interval]="10000" *ngFor="let items of listCards">
+      <div fxLayout="row" class="mat-box">
+        <div class="mat-comment" *ngFor="let card of items">
+          <mat-card>
+            <mat-card-content>
+              <p class="card-title">{{card.comentario}}</p>
+            </mat-card-content>
+          </mat-card>
+          <img src="{{card.imagem}}" />
+          <strong>{{card.nome}}</strong>
+          <span>{{card.decricao}}</span>
+        </div>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="title">
+        <b>Comodidade para você</b>
+    </div>
+    <div class="text">
+        <p>
+            Processos integrados, práticos e eficazes. Com o cadastro na GoMed, você recebe
+            pacientes novos e cultiva a relação com pacientes recorrentes - tudo a um clique.
+        </p>
+    </div>
+    <div class="row text-center" style="margin-top: 5%;">
+        <div class="col" *ngFor="let card of cards">
+            <vex-card-informativo [card]="card"></vex-card-informativo>
+        </div>
+    </div>
+    <div clas="row text-center">
+        <button class="botao  btn btn-padrao-outline btn-secondary btn-lg rounded-pill">
+            Cadastrar agora
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div style="margin-left: 10%; margin-right: 10%;">
+    <div class="text-center">
+        <h2 style="color: #069abb; font-size: x-large; padding-top: 4%;"><b>Tudo o que você precisa a um clique de
+                distância</b> </h2>
+    </div>
+    <div class="text-left">
+        <p style="font-size: medium;">Cuidar da saúde nunca foi tão fácil. Com a GoMed, você tem soluções integradas de
+            medicina e todas as etapas na palma da mão: do agendamento de consultas à compra de medicamentos.</p>
+    </div>
+    <div class="row text-center" style="margin-top: 5%;">
+        <div class="col" *ngFor="let card of cards">
+            <vex-card-informativo [card]="card"></vex-card-informativo>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<link href="https://fonts.googleapis.com/css2?family=Passion+One&family=Rubik:wght@500&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+  integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+<div style="background-color: white;">
+  <div class="painel-login">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-6 col-lg-6">
+          <h1 class="access mb-5">Acessar</h1>
+          <form (ngSubmit)="login()" [formGroup]="form">
+
+            <div fxFlex="auto" fxLayout="column">
+              <mat-form-field fxFlex="grow">
+                <mat-label>E-Mail</mat-label>
+                <input formControlName="email" matInput required>
+                <mat-error *ngIf="form.get('email').hasError('required')">We need an email address to log you in
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field fxFlex="grow">
+                <mat-label>Senha</mat-label>
+                <input [type]="inputType" formControlName="senha" matInput required>
+                <button (click)="toggleVisibility()" mat-icon-button matSuffix matTooltip="Vizualizar Senha"
+                  type="button">
+                  <mat-icon *ngIf="visible" [icIcon]="icVisibility"></mat-icon>
+                  <mat-icon *ngIf="!visible" [icIcon]="icVisibilityOff"></mat-icon>
+                </button>
+                <mat-hint>Click no olho para ver sua senha.</mat-hint>
+                <mat-error *ngIf="form.get('senha').hasError('required')">Precisamos de sua Senha para Logar!
+                </mat-error>
+              </mat-form-field>
+              <!-- <a href="#" v-if="false" class="remember">Esqueci a senha.</a> -->
+              <button size="lg" class="btn-padrao" type="submit">Acessar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-6 col-lg-6 control cadastro">
+          <p class="text-login">Agende consulta, realize exames e encontre os remédios que precisa em um clique</p>
+          <button class="btn-padrao">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

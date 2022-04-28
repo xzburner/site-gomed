@@ -1,0 +1,65 @@
+.fundo{
+    background: url('/assets/img/fundos/foto-para-voce.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    height: 25em;
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title{
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 47px;
+color: #069abb;
+display: flex;
+align-items: center;
+}
+
+.sub-title{
+    font-size: 28px;
+    line-height: 33px;
+    color: #447095;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    margin-top:-90px; 
+    padding: 20px; 
+    border: none;
+    height: 304px;
+    width: 358px;
+    flex-shrink: 2;
+}
+
+.card-body{
+ color: #fff;
+    .title-card{
+        font-family: 'Rubik';
+        width: 700;
+        font-size: 26px;
+        padding-bottom: 29px;
+        line-height: 33px;
+        display: flex;
+        align-items: initial;
+    }
+    
+}
+.text-card{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: initial;
+}

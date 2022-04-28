@@ -1,0 +1,41 @@
+<vex-busca></vex-busca>
+
+<div style="margin: 5% 10% 0 10%;">
+  <mat-card class="example-card text-center" style="margin: auto;" *ngFor="let medico of medicos">
+    <mat-card-content>
+      <div class="d-left">
+        <div class="icon">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <div class="medical">
+          <div class="name">
+            <strong>DEMETRIO NASTAS</strong>
+            <span>Acupuntura | CRM: 49858</span>
+          </div>
+          <div class="endereco">
+            <span>R. Paulo Setúbal - 147 - Sala Alphacenter, Alphacenter - São José dos Campos,</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-right">
+        <div class="horario-title">
+          <strong>Horários disponíveis</strong>
+        </div>
+
+        <div class="agenda" *ngFor="let agenda of medico.dataHoraDisponivelAgendamentoBroken">
+          <div class="date">
+            <span class="day">12/05/2022<span class="week-day">Qui</span></span>
+          </div>
+          <div class="pills">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+              <div ngxSlickItem class="slide" *ngFor="let item of agenda">
+                <div class="item">{{item}}</div>
+              </div>
+            </ngx-slick-carousel>
+          </div>
+        </div>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

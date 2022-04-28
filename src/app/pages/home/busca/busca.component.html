@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="fundo ">
+  <div style="margin-left: 10%; margin-right: 10%;">
+    <div>
+      <mat-button-toggle-group (change)="onChangeConsultaExame($event.value)" color="primary"
+        style="border-radius: 30px" class="mt-4 sm:mt-0">
+        <mat-button-toggle value="true" checked>Consultas</mat-button-toggle>
+        <mat-button-toggle value="false">Exames</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <h1 *ngIf="isConsulta" style="color: #069abb; font-size: xx-large; padding-top: 4%;"><b>Agende agora sua
+        consulta</b> </h1>
+    <h1 *ngIf="!isConsulta" style="color: #069abb; font-size: xx-large; padding-top: 4%;"><b>Agende agora seu exame</b>
+    </h1>
+    <div [formGroup]="form" class="px-6 py-4" fxLayout="column">
+      <vex-load *ngIf="load"></vex-load>
+      <div fxFlex="auto" fxLayout="column">
+        <div class="row">
+          <div *ngIf="isConsulta" class="col-md-4">
+            <mat-form-field fxFlex="grow" appearance="outline">
+              <mat-select placeholder="Especialidade" formControlName="especialidade">
+                <mat-select-filter placeholder="Busca..." (keyup)="filterEspecEvent($event.target.value)">
+                </mat-select-filter>
+                <mat-option *ngFor="let spec of listEspec" [value]="spec.id">
+                  <div class="row">
+                    <div class="col-md-2" style="margin: auto;">
+                      <img src="{{spec?.urlIcone}}" style="max-width: 25px;" alt="">
+                    </div>
+                    <div class="col-md-10">
+                      {{spec?.nome}}
+                    </div>
+                  </div>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div *ngIf="!isConsulta" class="col-md-4">
+            <mat-form-field fxFlex="grow" appearance="outline">
+              <mat-select placeholder="Exame" formControlName="exame">
+                <mat-select-filter placeholder="Busca..." (keyup)="filterExamesEvent($event.target.value)">
+                </mat-select-filter>
+                <mat-option *ngFor="let exame of listExames" [value]="exame.id">
+                  <div class="row">
+                    <div class="col-md-10">
+                      {{exame?.nome}}
+                    </div>
+                  </div>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field fxFlex="grow" appearance="outline">
+              <mat-label>Convenio</mat-label>
+              <mat-select formControlName="convenio">
+                <mat-select-filter placeholder="Busca..." (keyup)="filterConveniosEvent($event.target.value)">
+                </mat-select-filter>
+                <mat-option *ngFor="let conv of listConvenio" value="{{conv.id}}">
+                  {{conv.nome}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field fxFlex="grow" appearance="outline">
+              <mat-label>Cep</mat-label>
+              <input matInput formControlName="cep">
+            </mat-form-field>
+          </div>
+        </div>
+        <div style="padding-bottom: 2%;">
+          <button style="border-radius: 30px;" (click)="buscarMedicos()" mat-raised-button type="submit">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

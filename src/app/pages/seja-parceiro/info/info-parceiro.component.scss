@@ -1,0 +1,37 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    color: #069abb;
+    text-align: center;
+    font-family: 'Rubik';
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 90px;
+}
+.text p{
+    text-align: justify;
+    font-size: 18px;
+    align-items: center;
+    color: #515151;
+    line-height: 21px;
+    font-family:' Passion One', arial;
+    margin-top: 23px;
+}
+
+.botao{
+    margin: 49px auto auto;
+    font-family: Rubik;
+    font-size: 18px;
+    color: #447095;
+    background: #fff;
+    box-shadow: 0 7px 30px rgb(0 0 0 / 15%);
+    display: block;
+    padding: 17px 45.25px 17px 45.75px;
+}   
+
+
+
+
